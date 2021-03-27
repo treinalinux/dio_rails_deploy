@@ -24,11 +24,34 @@ rails generate controller Home index
 # 6 - Generate User
 rails generate devise User
 
-# 6 - Create and Migrate
+# 7 - Create and Migrate
 
 rails db:create
 
 rails db:migrate
+
+# rails generate scaffold
+rails generate scaffold restaurante name:string address:text
+
+# Case error can destroy
+rails destroy scaffold restaurante
+
+# New scaffold, now correct
+rails generate scaffold restaurant name:string address:text
+
+# rails db:migrate
+rails db:migrate
+
+# Create product 
+rails generate model product name:string value:float restaurant
+
+# Error restaurant, correct is restaurant_id 
+t.string :restaurant =>  t.integer :restaurant_id                                                                                                          
+# Now migrate
+rails db:migrate 
+
+# Generate controller
+rails g controller products index
 
 ```
 This README would normally document whatever steps are necessary to get the
