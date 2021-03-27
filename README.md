@@ -14,6 +14,22 @@ rails new dio_rails_deploy --git
 
 # 3 - Create Project with Postgres
 rails new dio_rails_deploy --git --database=postgresql -T
+
+# 4 - Working devise
+rails generate devise:install
+
+# 5 - Create view home
+rails generate controller Home index
+
+# 6 - Generate User
+rails generate devise User
+
+# 6 - Create and Migrate
+
+rails db:create
+
+rails db:migrate
+
 ```
 This README would normally document whatever steps are necessary to get the
 application up and running.
