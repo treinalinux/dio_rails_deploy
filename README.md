@@ -9,7 +9,10 @@ sudo apt-get install libpq-dev && gem install --user-install 'pg' -v '1.2.3'
 # 2 - Nokogiri
 gem install --user-install 'nokogiri' -v '1.10.10' -- --use-system-libraries
 
-# 3 - Create Project
+# 3 - Create Project no Postgres
+rails new dio_rails_deploy --git
+
+# 3 - Create Project with Postgres
 rails new dio_rails_deploy --git --database=postgresql -T
 ```
 This README would normally document whatever steps are necessary to get the
