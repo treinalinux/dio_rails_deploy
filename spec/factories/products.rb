@@ -1,7 +1,7 @@
-FactoryBot.define :product do
+FactoryBot.define do
   factory :product do
     name { Faker::Games::Pokemon.move }
-    address { rand(100) }
+    value { rand(100) }
     restaurant
   end
 end
