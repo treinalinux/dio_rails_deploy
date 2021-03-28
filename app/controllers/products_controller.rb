@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-
   def index
     @products = Product.all
   end
@@ -13,7 +12,8 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { render :index, notice: 'Product created.' }
+        format.html { redirect_to products_path, notice: 'Product created.' }
+        # format.html { render :index, notice: 'Product created.' }
       else
         format.html { render :new }
       end

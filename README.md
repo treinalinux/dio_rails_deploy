@@ -53,6 +53,18 @@ rails db:migrate
 # Generate controller
 rails g controller products index
 
+# Tests with rspec
+
+bundle install 
+
+spring stop
+
+rails g rspec:install
+
+rspec .
+
+rspec spec/models/restaurant_spec.rb
+
 ```
 This README would normally document whatever steps are necessary to get the
 application up and running.
