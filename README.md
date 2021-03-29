@@ -65,6 +65,18 @@ rspec .
 
 rspec spec/models/restaurant_spec.rb
 
+# Manager users
+
+rails g migration add_role_to_users
+
+rails db:migrate
+
+rails g migration add_user_id_to_restaurants
+
+rails db:migrate
+
+
+
 ```
 This README would normally document whatever steps are necessary to get the
 application up and running.
